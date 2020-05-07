@@ -68,10 +68,32 @@ function finalGrade (exam, projects) {
 // console.log(finalGrade(100, 12), 100);
 // console.log(finalGrade(85, 5), 90);
 
-const finalGrade = (exam, projects) => {
-    return (
-      exam > 90 || projects > 10 ? 100 :
-      exam > 75 && projects >= 5 ? 90 :
-      exam > 50 && projects >= 2 ? 75 : 0
-    )
+// const finalGrade = (exam, projects) => {
+//     return (
+//       exam > 90 || projects > 10 ? 100 :
+//       exam > 75 && projects >= 5 ? 90 :
+//       exam > 50 && projects >= 2 ? 75 : 0
+//     )
+// }
+
+//------------------------------------------
+
+function fixTheMeerkat(arr) {
+    let array = [];
+    array.push(arr[2], arr[1], arr[0]);
+    
+    return array;
 }
+
+// console.log(fixTheMeerkat(["tail", "body", "head"]), ["head", "body", "tail"]);
+// console.log(fixTheMeerkat(["tails", "body", "heads"]), ["heads", "body", "tails"]);
+// console.log(fixTheMeerkat(["bottom", "middle", "top"]), ["top", "middle", "bottom"]);
+// console.log(fixTheMeerkat(["lower legs", "torso", "upper legs"]), ["upper legs", "torso", "lower legs"]);
+// console.log(fixTheMeerkat(["ground", "rainbow", "sky"]), ["sky", "rainbow", "ground"]);
+
+// function fixTheMeerkat(arr) {
+//     return arr.reverse();
+// }
+
+//-----------------------------------------
+
