@@ -12,7 +12,7 @@
 
 // Make sure you cover the cases where certain words do not show up with correct capitalization. For example, getDrinkByProfession("pOLitiCIaN") should still return "Your tax dollars".
 
-//assuming you can't change data in const matchDriks
+//assuming you can't change data in const matchDrink
 function getDrinkByProfession(param){
 const matchDrink = {
                     "Jabroni": "Patron Tequila",
