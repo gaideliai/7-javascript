@@ -221,3 +221,24 @@ function abbrevName(name){
     name = name.split(' ');
     return name[0][0].toUpperCase()+"."+name[1][0].toUpperCase();    
 }
+
+//-----------------------------------------
+
+//Is the string uppercase?
+
+String.prototype.isUpperCase = function() {
+    if (this.length>0) {
+        let count = 0;
+        for (let i=0; i<this.length; i++) {
+            if (this[i] === this[i].toUpperCase() || this[i] === " "){
+                count++;
+            }       
+        }   
+        console.log(count);
+        console.log(this.length);
+        
+        return count===this.length;
+      
+    } else return true;
+}
+
