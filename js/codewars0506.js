@@ -121,3 +121,76 @@ function howMuchILoveYou(nbPetals) {
 // console.log(howMuchILoveYou(7),"I love you");
 // console.log(howMuchILoveYou(3),"a lot");
 // console.log(howMuchILoveYou(6),"not at all");
+
+//---------------------------------------------------
+
+//There are only 2 guaranteed ways to tell if you are speaking to The Loch Ness Monster: A.) It is a 400 foot tall beast from the paleolithic era B.) It will ask you for tree fiddy.
+
+function isLockNessMonster(s) {
+    if(s.indexOf('tree fiddy')>0 || s.indexOf('3.50')>0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+//--------------------------------------------------
+
+//String incrementer
+
+// Examples:
+// foo -> foo1
+// foobar23 -> foobar24
+// foo0042 -> foo0043
+// foo9 -> foo10
+// foo099 -> foo100
+
+function incrementString (strng) {
+    let last = strng.slice(-1);
+    let num = parseInt(last);
+    if (Number.isInteger(num) && num<9) {
+        strng=strng.slice(0, -1)+(num+1);
+    }
+    if (!Number.isInteger(num)){
+        strng+=1;
+    }
+    // Test Passed: 'foo' -> 'foo1'
+    // Test Passed: 'foobar001' -> 'foobar002'
+
+    let count = 0;
+    if (num == 9) {
+        for (let i=1; i<strng.length; i++) {
+            if (strng.slice(-i)>=0){
+                count++;
+            }
+        }
+        last = strng.slice(-count);
+        console.log(last);
+                        
+        num = parseInt(last);        
+
+        if (last[1]==0) {
+            let zeroCount = 1;
+            for (let i=1; i<last.length-2; i++){
+                if (last[i]==0) {
+                    zeroCount++;
+                }
+            }            
+            strng=strng.slice(0, (-count+zeroCount-1))+(num+1);
+        } else {
+            strng=strng.slice(0, -count)+(num+1);
+        }        
+    }
+    return strng;
+}
+
+// console.log(incrementString("foobar000"), "foobar001");
+// console.log(incrementString("foo"), "foo1");
+// console.log(incrementString("foobar001"), "foobar002");
+// console.log(incrementString("foobar9"), "foobar10");
+// console.log(incrementString("foobar99"), "foobar100");
+// console.log(incrementString("foobar989"), "foobar990");
+// console.log(incrementString("foobar099"), "foobar100");
+// console.log(incrementString(""), "1");
+// console.log(incrementString("foobar00999"), "foobar01000");
+// console.log(incrementString("foobar00000999"), "foobar00001000");
