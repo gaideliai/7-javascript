@@ -204,11 +204,20 @@ function zeros (n) {
     return zeros;
 }
 
-console.log(zeros(0), 0, "Testing with n = 0");
-console.log(zeros(5), 1, "Testing with n = 5");
-console.log(zeros(30), 7, "Testing with n = 30");
-console.log(zeros(50), 12, "Testing with n = 50");
-console.log(zeros(99), 22, "Testing with n = 99");
-console.log(zeros(100), 24, "Testing with n = 100");
-console.log(zeros(999), 246, "Testing with n = 999");
-console.log(zeros(1000), 249, "Testing with n = 1000");
+// console.log(zeros(0), 0, "Testing with n = 0");
+// console.log(zeros(5), 1, "Testing with n = 5");
+// console.log(zeros(30), 7, "Testing with n = 30");
+// console.log(zeros(50), 12, "Testing with n = 50");
+// console.log(zeros(99), 22, "Testing with n = 99");
+// console.log(zeros(100), 24, "Testing with n = 100");
+// console.log(zeros(999), 246, "Testing with n = 999");
+// console.log(zeros(1000), 249, "Testing with n = 1000");
+
+//-----------------------------------------------
+
+//Abbreviate a Two Word Name
+
+function abbrevName(name){
+    name = name.split(' ');
+    return name[0][0].toUpperCase()+"."+name[1][0].toUpperCase();    
+}
