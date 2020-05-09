@@ -357,3 +357,11 @@ function digitize(n) {
 }
 
 //console.log(digitize(35231),[1,3,2,5,3]);
+
+//--------------------------------------------
+
+// Remove First and Last Character
+
+function removeChar(str){
+  return str.slice(1, -1);
+}
