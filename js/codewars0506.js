@@ -264,3 +264,48 @@ function removeEveryOther(arr){
 // console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 // console.log(removeEveryOther([[1, 2]]));
 // console.log(removeEveryOther([['Goodbye'], {'Great': 'Job'}]));
+
+//------------------------------------------------------------------
+
+//Watermelon
+
+function divide(weight){
+  return weight === 2 ? false: weight%2===0;
+}
+
+// console.log(divide(4), true);
+// console.log(divide(2), false);
+// console.log(divide(5), false);
+// console.log(divide(88), true);
+
+//-------------------------------------------------------------------
+
+// function noBoringZeros(n) {
+//   if (n===0 || Math.abs(n%10)>0) {
+//     return n;
+//   }
+//   let count = 1;
+//   let num = n;
+//   while (Math.abs(num)>1) {
+//    if (num%10===0){
+//       count*=10;
+//    }
+//    num/=10;
+//   }
+//   return n/(count);  
+// }
+
+function noBoringZeros(n) {
+  while(n%10===0 && n!==0){
+    n/=10;
+  }
+return n;
+}
+
+
+// console.log(noBoringZeros(1450), 145);
+// console.log(noBoringZeros(960000), 96);
+// console.log(noBoringZeros(1050), 105);
+// console.log(noBoringZeros(-1050), -105);
+// console.log(noBoringZeros(-105), -105);
+// console.log(noBoringZeros(0), 0);
