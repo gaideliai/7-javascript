@@ -226,19 +226,41 @@ function abbrevName(name){
 
 //Is the string uppercase?
 
+// String.prototype.isUpperCase = function() {
+//     if (this.length>0) {
+//         let count = 0;
+//         for (let i=0; i<this.length; i++) {
+//             if (this[i] === this[i].toUpperCase() || this[i] === " "){
+//                 count++;
+//             }       
+//         }           
+//         return count===this.length;      
+//     } else return true;
+// }
+
 String.prototype.isUpperCase = function() {
-    if (this.length>0) {
-        let count = 0;
-        for (let i=0; i<this.length; i++) {
-            if (this[i] === this[i].toUpperCase() || this[i] === " "){
-                count++;
-            }       
-        }   
-        console.log(count);
-        console.log(this.length);
-        
-        return count===this.length;
-      
-    } else return true;
+    return this.toUpperCase() === this;
 }
 
+// console.log(''.isUpperCase() !== undefined, 'Must define the prototype isUpperCase')
+// console.log('c'.isUpperCase(), false, 'c is not upper case');
+// console.log('C'.isUpperCase(), true, 'C is upper case');
+// console.log('hello I AM DONALD'.isUpperCase(), false, 'hello I AM DONALD not is upper case');
+// console.log('HELLO I AM DONALD'.isUpperCase(), true, 'HELLO I AM DONALD is upper case');
+// console.log('ACSKLDFJSgSKLDFJSKLDFJ'.isUpperCase(), false, 'ACSKLDFJSgSKLDFJSKLDFJ not is upper case');
+// console.log('ACSKLDFJSGSKLDFJSKLDFJ'.isUpperCase(), true, 'ACSKLDFJSGSKLDFJSKLDFJ is upper case');
+
+//-----------------------------------------------------------------
+
+function removeEveryOther(arr){
+  let newarr = [];
+  for (let i=0; i<arr.length; i+=2) {
+    newarr.push(arr[i]);    
+  }
+  return newarr;
+}
+
+// console.log(removeEveryOther(['Hello', 'Goodbye', 'Hello Again']));
+// console.log(removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+// console.log(removeEveryOther([[1, 2]]));
+// console.log(removeEveryOther([['Goodbye'], {'Great': 'Job'}]));
