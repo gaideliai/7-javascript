@@ -91,9 +91,9 @@ function fixTheMeerkat(arr) {
 // console.log(fixTheMeerkat(["lower legs", "torso", "upper legs"]), ["upper legs", "torso", "lower legs"]);
 // console.log(fixTheMeerkat(["ground", "rainbow", "sky"]), ["sky", "rainbow", "ground"]);
 
-// function fixTheMeerkat(arr) {
-//     return arr.reverse();
-// }
+function fixTheMeerkat(arr) {
+    return arr.reverse();
+}
 
 //-----------------------------------------
 
@@ -325,3 +325,19 @@ function betterThanAverage(classPoints, yourPoints) {
 // function betterThanAverage(classPoints, yourPoints) {
 //   return yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length; 
 // }
+
+//--------------------------------------------
+
+// Reversed string
+
+function solution(str){
+  let newstr = '';
+  for (let i=str.length-1; i>=0; i--) {
+    newstr += str[i];
+  }
+  return newstr;
+}
+
+function solution(str){
+  return str.split('').reverse().join('');  
+}
