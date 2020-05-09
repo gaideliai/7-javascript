@@ -386,7 +386,7 @@ const reverseSeq = n => {
   return arr;
 }
 
-console.log(reverseSeq(5), [5, 4, 3, 2, 1]);
+//console.log(reverseSeq(5), [5, 4, 3, 2, 1]);
 
 //---------------------------------------------
 
@@ -396,3 +396,57 @@ function maps(x){
   return x.map(a => a*2);
 }
 
+//---------------------------------------------
+
+// Given the number (n), populate an array with all numbers up to and including that number, but excluding zero.
+
+function monkeyCount(n) {
+  let arr = [];
+  for (let i=1; i<=n; i++) {
+    arr.push(i);
+  }
+  return arr;
+}
+
+//--------------------------------------------
+
+function between(a, b) {
+  let arr = [];
+  for (let i=a; i<=b; i++) {
+    arr.push(i);
+  }
+  return arr;
+}
+
+//---------------------------------------------
+
+function calculateTip(amount, rating) {
+  if (rating.toLowerCase() === "terrible") {
+    return 0;
+  }
+  if (rating.toLowerCase() === "poor") {
+    return Math.ceil(amount/100*5);
+  }
+  if (rating.toLowerCase() === "good") {
+    return Math.ceil(amount/100*10);
+  }
+  if (rating.toLowerCase() === "great") {
+    return Math.ceil(amount/100*15);
+  }
+  if (rating.toLowerCase() === "excellent") {
+    return Math.ceil(amount/100*20);
+  } else {
+    return "Rating not recognised";
+  }
+}
+
+function calculateTip(amount, rating) {
+  switch (rating.toLowerCase()) {
+    case "terrible": return 0;
+    case "poor": return Math.ceil(amount * 0.05);
+    case "good": return Math.ceil(amount * 0.1);
+    case "great": return Math.ceil(amount * 0.15);
+    case "excellent": return Math.ceil(amount * 0.2);
+    default: return "Rating not recognised";
+  }
+}
