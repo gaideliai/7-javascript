@@ -322,9 +322,9 @@ function betterThanAverage(classPoints, yourPoints) {
   return avg < yourPoints;
 }
 
-// function betterThanAverage(classPoints, yourPoints) {
-//   return yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length; 
-// }
+function betterThanAverage(classPoints, yourPoints) {
+  return yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length; 
+}
 
 //--------------------------------------------
 
@@ -365,3 +365,34 @@ function digitize(n) {
 function removeChar(str){
   return str.slice(1, -1);
 }
+
+//---------------------------------------------
+
+//Sum Mixed Array
+
+function sumMix(x){
+  return x.map(Number).reduce((a, b)=>a+b, 0);
+}
+
+//console.log(sumMix([9, 3, '7', '3']), 22);
+
+//---------------------------------------------
+
+const reverseSeq = n => {
+  let arr = [];
+  for (let i=n; i>0; i--) {
+    arr.push[i];
+  }
+  return arr;
+}
+
+console.log(reverseSeq(5), [5, 4, 3, 2, 1]);
+
+//---------------------------------------------
+
+//Given an array of integers, return a new array with each value doubled.
+
+function maps(x){
+  return x.map(a => a*2);
+}
+
