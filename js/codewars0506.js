@@ -341,3 +341,19 @@ function solution(str){
 function solution(str){
   return str.split('').reverse().join('');  
 }
+
+//-------------------------------------------
+
+//Convert number to reversed array of digits
+
+function digitize(n) {
+  let str = n.toString();
+  str.split('').reverse().map(a => parseInt(a));
+  return 
+}
+
+function digitize(n) {
+  return String(n).split('').map(Number).reverse();
+}
+
+//console.log(digitize(35231),[1,3,2,5,3]);
