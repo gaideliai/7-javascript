@@ -309,3 +309,19 @@ return n;
 // console.log(noBoringZeros(-1050), -105);
 // console.log(noBoringZeros(-105), -105);
 // console.log(noBoringZeros(0), 0);
+
+//----------------------------------------------
+
+function betterThanAverage(classPoints, yourPoints) {
+  classPoints.push(yourPoints);
+  let total = 0;
+  for (let i=0; i<classPoints.length; i++) {
+    total += classPoints[i];
+  }
+  let avg = total/classPoints.length;
+  return avg < yourPoints;
+}
+
+// function betterThanAverage(classPoints, yourPoints) {
+//   return yourPoints > classPoints.reduce((a, b) => a + b, 0) / classPoints.length; 
+// }
