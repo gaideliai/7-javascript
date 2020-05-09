@@ -450,3 +450,18 @@ function calculateTip(amount, rating) {
     default: return "Rating not recognised";
   }
 }
+
+// const calculateTip = (a,r) => {
+//   const i = ['terrible', 'poor', 'good', 'great', 'excellent'].indexOf(r.toLowerCase());
+//   return i === -1 ? "Rating not recognised" : Math.ceil(i*a*.05);
+// }
+
+// function calculateTip(amount, rating) {
+//   rating = rating.toLowerCase();
+//   return rating === 'terrible' ? 0
+//        : rating === 'poor' ? Math.ceil(amount * 0.05)
+//        : rating === 'good' ? Math.ceil(amount * 0.1)
+//        : rating === 'great' ? Math.ceil(amount * 0.15)
+//        : rating === 'excellent' ? Math.ceil(amount * 0.2)
+//        : "Rating not recognised";
+// }
