@@ -126,3 +126,16 @@ function nthFibo(n) {
 function nthFibo(n) {
     return n < 2 ? 0 : n == 2 ? 1 : nthFibo(n-1) + nthFibo(n-2);
 }
+
+//------------------------------------------
+
+//Genetic Algorithm Series - #3 Crossover
+
+const crossover = (ch1, ch2, index) => {
+    let arr = [];
+    let chr1=ch1.slice(0, index)+ch2.slice(index, ch2.length);
+    let chr2=ch2.slice(0, index)+ch1.slice(index, ch1.length);
+    arr.push(chr1);
+    arr.push(chr2);
+    return arr;
+};
