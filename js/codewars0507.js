@@ -47,3 +47,36 @@ function letterCheck(arr) {
 // console.log(letterCheck(["mastering", "streaming"]), true);
 // console.log(letterCheck(["drapes", "compadres"]), false);
 // console.log(letterCheck(["deltas", "slated"]), true);
+
+//------------------------------------------------
+
+//Fibonacci sequence
+
+function Fibonacci (n1, n2) {
+    console.log(n1, n2);
+    let n= n1+n2;
+    while (n < 200) {
+        n = n1+n2;
+        console.log(n);
+        n1=n2;
+        n2=n;        
+    }
+}
+
+//Fibonacci(0, 1);
+
+
+//--------------------------------------------------
+
+//factorial
+
+function factorial (n) {
+    let fakt = 1;
+    while (n>=2) {
+        fakt *= n*(n-1);
+        n=n-2;
+    }
+    return fakt;
+}
+
+//console.log(factorial(12));

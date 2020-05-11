@@ -165,7 +165,7 @@ function incrementString (strng) {
             }
         }
         last = strng.slice(-count);
-        console.log(last);
+        //console.log(last);
                         
         num = parseInt(last);        
 
