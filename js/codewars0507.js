@@ -63,8 +63,18 @@ function Fibonacci (n1, n2) {
     }
 }
 
-Fibonacci(0, 1);
+//Fibonacci(0, 1);
 
+//Rekursija Fibonacci
+
+function Fibonacci (n1, n2) {
+    console.log(n1);
+    if (n1<200) {
+        Fibonacci(n2, n1+n2);
+    }
+}
+
+Fibonacci(0, 1);
 
 //--------------------------------------------------
 
@@ -85,7 +95,7 @@ function factorial (n) {
 
 function nthFibo(n) {
     if (n==1) return 0;
-    if (n==2 || n==3) return 1;
+    if (n==2) return 1;
     let n1=0;
     let n2=1;
     let i=2;
@@ -99,8 +109,20 @@ function nthFibo(n) {
     return fibn;
 }
 
-//console.log(nthFibo(10));
+//console.log(nthFibo(5));
+
+// function nthFibo(n) {
+//     let a = 0; 
+//     let b = 1;
+    
+//     for (let i = 3; i <= n; i++) {
+//         let c = a + b;
+//         a = b;
+//         b = c;
+//     }
+//     return n == 1? a: b;
+// }
 
 function nthFibo(n) {
     return n < 2 ? 0 : n == 2 ? 1 : nthFibo(n-1) + nthFibo(n-2);
-  }
+}
