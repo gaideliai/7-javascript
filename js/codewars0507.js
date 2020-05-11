@@ -63,7 +63,7 @@ function Fibonacci (n1, n2) {
     }
 }
 
-//Fibonacci(0, 1);
+Fibonacci(0, 1);
 
 
 //--------------------------------------------------
@@ -80,3 +80,27 @@ function factorial (n) {
 }
 
 //console.log(factorial(12));
+
+//--------------------------------------------------
+
+function nthFibo(n) {
+    if (n==1) return 0;
+    if (n==2 || n==3) return 1;
+    let n1=0;
+    let n2=1;
+    let i=2;
+    let fibn = n1+n2;
+    while (i !== n) {
+        fibn = n1+n2;
+        i++;
+        n1=n2;
+        n2=fibn;
+    }
+    return fibn;
+}
+
+//console.log(nthFibo(10));
+
+function nthFibo(n) {
+    return n < 2 ? 0 : n == 2 ? 1 : nthFibo(n-1) + nthFibo(n-2);
+  }
