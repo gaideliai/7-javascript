@@ -74,7 +74,7 @@ function Fibonacci (n1, n2) {
     }
 }
 
-Fibonacci(0, 1);
+//Fibonacci(0, 1);
 
 //--------------------------------------------------
 
@@ -139,3 +139,53 @@ const crossover = (ch1, ch2, index) => {
     arr.push(chr2);
     return arr;
 };
+
+// const crossover = (chromosome1, chromosome2, index) => {
+//     return [
+//       chromosome1.substring(0, index) + chromosome2.substring(index),
+//       chromosome2.substring(0, index) + chromosome1.substring(index)
+//     ]
+// };
+
+//--------------------------------------------
+
+function orderedCount (text) {
+    let count = 1;
+    let result = [];
+    for (let i=0; i<text.length; i++) {
+        let ar = [];
+        let letter = text[i];
+        for (let j=0; j<text.length; j++) {
+            if (i === j) {
+                continue;
+            }
+            if (letter === text[j]) {
+                count++;
+            }
+        }
+        ar.push(letter);
+        ar.push(count);
+        count = 1;                  
+        result.push(ar);        
+    }    
+    return result;
+}
+
+//console.log(orderedCount ("abracadabra"));
+
+//------------------------------------------------------
+
+//Largest 5 digit number in a series
+
+function solution(digits){
+    let ar = [];
+    for (let i=0; i<digits.length; i++) {
+      let substring = digits.substr(i, 5);
+      ar.push(Number(substring));
+    }
+    console.log(ar);
+        
+    return Math.max(...ar);
+}
+
+//console.log(solution("1234567890123456"));
