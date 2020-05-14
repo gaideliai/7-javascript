@@ -278,3 +278,31 @@ function multiplyAndFilter(array, multiplier){
 // console.log(multiplyAndFilter([1,2,3], 0), [0, 0, 0]);
 // console.log(multiplyAndFilter([0,0,0], 2), [0, 0, 0]);
 // console.log(multiplyAndFilter([1, null, function(){}, 2.5, 'string', 10, undefined, {}, []], 3), [3,7.5,30]);
+
+//---------------------------------------------
+
+//Counting Valleys
+
+function countingValleys(s) {
+    let sum = 0;
+    let upcount = 0;
+    let downcount = 0;
+    for (let i=0; i<s.length; i++) {
+        let d = s[i];
+        if (d === "U") {
+            sum+=1;
+            if (sum === 0) {
+                upcount +=1;
+            }
+        }
+        if (d === "D") {
+            sum-=1;
+            if (sum === 0) {
+                downcount+=1;
+            }
+        }
+    }
+    return upcount;
+}
+
+//console.log(countingValleys('UFFDDFDUDFUFU'));
