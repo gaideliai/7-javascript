@@ -155,10 +155,7 @@ function orderedCount (text) {
     for (let i=0; i<text.length; i++) {
         let ar = [];
         let letter = text[i];
-        for (let j=0; j<text.length; j++) {
-            if (i === j) {
-                continue;
-            }
+        for (let j=i+1; j<text.length; j++) {
             if (letter === text[j]) {
                 count++;
             }
@@ -167,11 +164,18 @@ function orderedCount (text) {
         ar.push(count);
         count = 1;                  
         result.push(ar);        
-    }    
-    return result;
+    }
+    
+    //console.log(result);
+    
+    let array = [];
+                
+    return array;
 }
 
-//console.log(orderedCount ("abracadabra"));
+// console.log(orderedCount ("Code Wars"));
+// console.log(orderedCount ("cadabraabra"));
+// console.log(orderedCount ("122"));
 
 //------------------------------------------------------
 
@@ -246,3 +250,31 @@ function reverse (array) {
 
 // console.log(reverse([1,2,3]));
 // console.log(reverse([1,null,14,"two"]));
+
+reverse = function(array) {
+    let newArray = [];
+        for (let i=array.length-1; i>=0; i--) {
+            newArray.push(array[i]);
+        }
+    return newArray;
+}
+
+//------------------------------------------------
+
+//Multiply array values and filter non-numeric
+
+function multiplyAndFilter(array, multiplier){
+    let ar = [];
+    for (let i=0; i<array.length; i++) {
+        if ( typeof array[i] === "number" ) {
+            array[i]*=multiplier;
+            ar.push(array[i]);
+        }       
+    }
+    return ar;
+}
+
+// console.log(multiplyAndFilter([1,2,3,4], 1.5), [1.5, 3, 4.5, 6]);
+// console.log(multiplyAndFilter([1,2,3], 0), [0, 0, 0]);
+// console.log(multiplyAndFilter([0,0,0], 2), [0, 0, 0]);
+// console.log(multiplyAndFilter([1, null, function(){}, 2.5, 'string', 10, undefined, {}, []], 3), [3,7.5,30]);
