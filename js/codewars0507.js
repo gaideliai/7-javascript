@@ -214,13 +214,13 @@ function myLanguages(results) {
     return ar;
 }
 
-console.log(myLanguages({"Java": 10, "Ruby": 80, "Python": 65}));
-console.log(myLanguages({"Hindi": 60, "Dutch" : 93, "Greek": 71}));
+// console.log(myLanguages({"Java": 10, "Ruby": 80, "Python": 65}));
+// console.log(myLanguages({"Hindi": 60, "Dutch" : 93, "Greek": 71}));
 //console.log(myLanguages({"C++": 50, "ASM": 10, "Haskell": 20}));
 
 //---------------------------------------
 
-//basic calculator
+//Basic calculator
 
 function calculate(num1, operation, num2) {
     switch (operation){
@@ -231,3 +231,18 @@ function calculate(num1, operation, num2) {
       default: return null;
     } 
 }
+
+//---------------------------------------
+
+//Reverse array function
+
+function reverse (array) {
+    let newArray = [];
+    for (let i=0; i<array.length; i++) {
+        newArray[i] = array[array.length-1-i];
+    }
+    return newArray;
+}
+
+// console.log(reverse([1,2,3]));
+// console.log(reverse([1,null,14,"two"]));
