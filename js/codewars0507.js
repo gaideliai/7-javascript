@@ -189,3 +189,45 @@ function solution(digits){
 }
 
 //console.log(solution("1234567890123456"));
+
+//-----------------------------------------------------
+
+//You are given a dictionary/hash/object containing some languages and your test results in the given languages. Return the list of languages where your test score is at least 60, in descending order of the results.
+
+function myLanguages(results) {
+    let ar = [];
+    Object.keys(results).forEach(function (score) {
+        ar.push(score);       
+    })
+    let max = results[ar[0]];
+    console.log(max);
+    let temp = 0;
+    for (let i=0; i<ar.length-1; i++) {
+        for (let j=i+1; j<ar.length; j++) {  
+            if (results[ar[i]] > results[ar[j]]) {
+                temp = results[ar[i]];
+                results[ar[i]] = results[ar[j]];
+                results[ar[j]] = temp;
+            }
+        }
+    }
+    return ar;
+}
+
+console.log(myLanguages({"Java": 10, "Ruby": 80, "Python": 65}));
+console.log(myLanguages({"Hindi": 60, "Dutch" : 93, "Greek": 71}));
+//console.log(myLanguages({"C++": 50, "ASM": 10, "Haskell": 20}));
+
+//---------------------------------------
+
+//basic calculator
+
+function calculate(num1, operation, num2) {
+    switch (operation){
+      case "+": return num1+num2;
+      case "-": return num1-num2;
+      case "*": return num1*num2;
+      case "/": return num2===0 ? null : num1/num2;
+      default: return null;
+    } 
+}
