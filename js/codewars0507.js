@@ -319,3 +319,18 @@ function halvingSum(n) {
         }
     return sum;
 }
+
+//---------------------------------------------------
+
+//Sum even numbers
+
+function sumEvenNumbers(input) {
+    let sum = 0;
+    for (let i=0; i< input.length; i++) {
+        const num = input[i];
+        if (num % 2 === 0) {
+            sum += num;
+        }
+    }
+    return sum;
+}
