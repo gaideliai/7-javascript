@@ -306,3 +306,16 @@ function countingValleys(s) {
 }
 
 //console.log(countingValleys('UFFDDFDUDFUFU'));
+
+//---------------------------------------------------
+
+//Halving Sum - All elements of the sum are the results of integer division.
+
+function halvingSum(n) {
+    let sum = 0;
+        while (n>=1) {
+            sum += n;
+            n = Math.trunc(n/2);
+        }
+    return sum;
+}
